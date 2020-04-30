@@ -1,18 +1,28 @@
 #!/usr/bin/env python
+import numpy as np
 import pandas as pd
 import matplotlib
 from matplotlib import pyplot as plt
-print('Hello World')
-x_values = [0, 1, 2, 3, 4]
-y_values = [0, 1, 4, 9, 16]
-plt.plot(x_values, y_values)
-plt.show()
 
-x = range(12)
-y = [3000, 3005, 3010, 2900, 2950, 3050, 3000, 3100, 2980, 2980, 2920, 3010]
-plt.plot(x, y)
-plt.axis([0, 12, 2900, 3100])
-plt.xlabel('Time')
-plt.ylabel('Dollars spent on coffee')
-plt.title('My Last Twelve Years of Coffee Drinking')
+def y_func(x):
+  return 2*x+3
+
+def func(x):
+  return 3*x-1
+
+
+x = list(range(0,15))
+y1 = []
+y2 = []
+
+for i in x:
+  y1.append(y_func(i))
+  y2.append(func(i))
+  
+plt.plot(x,y1, color="red", marker="o")
+plt.plot(x,y2, color="blue", marker="o")
+plt.title("two graphs")
+plt.xlabel("Varibale X")
+plt.ylabel("f(x)")
+plt.legend(["Function 1", "Function 2"])
 plt.show()
