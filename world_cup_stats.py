@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-from matplotlib import pyplot as plt
 import pandas as pd
+from matplotlib import pyplot as plt
+#import pandas as pd
 import seaborn as sns
 import numpy as np
 
