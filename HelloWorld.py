@@ -15,6 +15,11 @@ x = list(range(0,15))
 y1 = []
 y2 = []
 
+dataset_two = [-10, 30, 4, 5, 10, -20]
+dataset_two.sort()
+
+print(dataset_two)
+
 for i in x:
   y1.append(y_func(i))
   y2.append(func(i))
